@@ -6,12 +6,12 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:05:14 by prossi            #+#    #+#             */
-/*   Updated: 2024/08/10 11:15:24 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/17 19:18:05 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef libft.h
+# define libft.h
 
 # include <stdlib.h>
 # include <unistd.h>

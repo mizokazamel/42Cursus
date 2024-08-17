@@ -6,9 +6,11 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 22:23:58 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/02 22:26:50 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/17 19:17:35 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

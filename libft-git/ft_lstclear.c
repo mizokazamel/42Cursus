@@ -6,9 +6,11 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 00:27:33 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/15 21:31:34 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/17 19:17:11 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
