@@ -50,7 +50,7 @@ void	convert_to_string(char *ptr, long n, size_t length, int isnegative)
 		length--;
 	}
 	if (isnegative == 1)
-		ptr[length] = '-';
+		ptr[--length] = '-';
 }
 
 char	*ft_itoa(int n)
@@ -79,3 +79,9 @@ char	*ft_itoa(int n)
 	convert_to_string(ptr, n_long, length, isnegative);
 	return (ptr);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	printf("%s %s\n", ft_itoa(-2147483647), ft_itoa(-2147483648));
+// }

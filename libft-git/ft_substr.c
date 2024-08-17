@@ -14,19 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		strlen;
+	size_t	strlen;
 	char	*substring;
 	size_t	i;
 
-	i = 0;
+	i = -1;
 	strlen = ft_strlen(s);
 	if (start >= strlen)
 		return (NULL);
 	substring = malloc(len + 1);
 	if (!substring)
 		return (NULL);
-	while (s[start + i] && i < len)
-		substring[i] = s[start + i++];
+	while (s[start + ++i] && i < len)
+		substring[i] = s[start + i];
 	substring[i] = '\0';
 	return (substring);
 }

@@ -27,7 +27,7 @@ void	ft_lstmap_add_node(t_list **newlsthead,
 	}
 }
 
-t_list	*ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*currentlst;
 	t_list	*newlsthead;
@@ -38,7 +38,8 @@ t_list	*ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void *))
 	newlsthead = NULL;
 	while (currentlst != NULL)
 	{
-		newnode = ft_lstnew(f(currentlst->content));
+		newnode = ft_lstnew(currentlst->content);
+		f(newnode->content);
 		if (newnode == NULL)
 		{
 			ft_lstclear(&newlsthead, del);

@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	const char	end;
+	const char	*end;
 
 	end = s;
 	while (*end)

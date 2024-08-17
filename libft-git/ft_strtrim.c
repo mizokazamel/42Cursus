@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	startposition;
 	size_t	endposition;
 	size_t	i;
-	int		strlength;
+	size_t	strlength;
 	char	*ptr;
 
 	strlength = ft_strlen(s1);
@@ -50,6 +50,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!ptr)
 		return (NULL);
 	while (startposition + i != endposition)
-		ptr[i] = s1[startposition + i++];
+	{
+		ptr[i] = s1[startposition + i];
+		i++;
+	}
 	return (ptr);
 }
