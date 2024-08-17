@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_alpha.c                                         :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkazamel <mkazamel@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 22:24:18 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/17 19:16:52 by mkazamel         ###   ########.fr       */
+/*   Created: 2024/06/26 00:06:44 by mkazamel          #+#    #+#             */
+/*   Updated: 2024/08/17 19:13:13 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
-	return (ft_tolower(c) || ft_toupper(c));
+	return (c >= 0 && c <= 9);
 }
