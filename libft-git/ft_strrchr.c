@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazamel <mkazamel@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 23:24:45 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/17 19:13:51 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/18 12:29:12 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)end);
 	while (end != s)
 	{
-		if ((*--end == (char)c))
+		end--;
+		if (*end == (char)c)
 			return ((char *)end);
 	}
 	if ((*end == (char)c))

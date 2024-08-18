@@ -6,7 +6,7 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 23:02:28 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/05 00:02:17 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/18 12:36:38 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = -1;
 	strlen = ft_strlen(s);
 	if (start >= strlen)
-		return (NULL);
+		return (ft_strdup(""));
 	substring = malloc(len + 1);
 	if (!substring)
 		return (NULL);
