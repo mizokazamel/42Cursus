@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazamel <mkazamel@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 11:09:15 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/07/27 12:20:03 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/18 10:28:14 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	hi;
 	size_t	ni;
 
-	// if (!haystack || !needle)
-	// 	return (NULL);
 	if (*needle == '\0')
 		return ((char *)haystack);
 	hi = 0;

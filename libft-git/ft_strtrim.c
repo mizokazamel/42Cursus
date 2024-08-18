@@ -6,7 +6,7 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 23:13:48 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/06 00:41:10 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/18 10:29:19 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 
 	strlength = ft_strlen(s1);
-	i = 0;
+	i = -1;
 	startposition = 0;
 	endposition = strlength;
 	if (!s1)
@@ -49,10 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = ft_calloc(strlength + 1, 1);
 	if (!ptr)
 		return (NULL);
-	while (startposition + i != endposition)
-	{
+	while (startposition + ++i != endposition)
 		ptr[i] = s1[startposition + i];
-		i++;
-	}
 	return (ptr);
 }
