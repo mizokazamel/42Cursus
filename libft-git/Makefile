@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkazamel <mkazamel@student.42abudhabi.a    +#+  +:+       +#+         #
+#    By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/04 22:56:00 by mkazamel          #+#    #+#              #
-#    Updated: 2024/07/07 14:16:18 by mkazamel         ###   ########.fr        #
+#    Updated: 2024/08/19 23:40:32 by mkazamel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

@@ -6,7 +6,7 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 22:33:28 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/18 11:56:03 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/19 23:49:17 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
