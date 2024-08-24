@@ -6,12 +6,12 @@
 #    By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/04 22:56:00 by mkazamel          #+#    #+#              #
-#    Updated: 2024/08/19 23:40:32 by mkazamel         ###   ########.fr        #
+#    Updated: 2024/08/20 19:50:12 by mkazamel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I.
 NAME = libft.a
 MANDATORY_PART_SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 					ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
@@ -31,7 +31,7 @@ AR = ar rcs
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(MANDATORY_OBJ) $(INCLUDES)

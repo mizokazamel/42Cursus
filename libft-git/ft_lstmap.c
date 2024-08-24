@@ -6,47 +6,30 @@
 /*   By: mkazamel <mkazamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 23:25:51 by mkazamel          #+#    #+#             */
-/*   Updated: 2024/08/16 00:11:24 by mkazamel         ###   ########.fr       */
+/*   Updated: 2024/08/20 19:51:50 by mkazamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstmap_add_node(t_list **newlsthead,
-		t_list *newnode, t_list **lastnewnode)
-{
-	if (*newlsthead == NULL)
-	{
-		*newlsthead = newnode;
-		*lastnewnode = newnode;
-	}
-	else
-	{
-		(*lastnewnode)->next = newnode;
-		*lastnewnode = newnode;
-	}
-}
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*currentlst;
-	t_list	*newlsthead;
+	t_list	*newlist;
 	t_list	*newnode;
-	t_list	*lastnewnode;
 
-	currentlst = lst;
-	newlsthead = NULL;
-	while (currentlst != NULL)
+	if (!lst || !f || !del)
+		return (NULL);
+	newlist = NULL;
+	while (lst)
 	{
-		newnode = ft_lstnew(currentlst->content);
-		f(newnode->content);
-		if (newnode == NULL)
+		newnode = ft_lstnew(f(lst->content));
+		if (!newnode)
 		{
-			ft_lstclear(&newlsthead, del);
+			ft_lstclear(&newlist, del);
 			return (NULL);
 		}
-		ft_lstmap_add_node(&newlsthead, newnode, &lastnewnode);
-		currentlst = currentlst->next;
+		ft_lstadd_back(&newlist, newnode);
+		lst = lst->next;
 	}
-	return (newlsthead);
+	return (newlist);
 }
